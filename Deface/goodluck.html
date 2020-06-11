@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.002/web/hack.css" rel="stylesheet">
+    <title>Good Luck</title>
+    <style>
+        body{
+            background-color: black;
+            padding: 5%;
+        }
+        .goodluck{
+            text-align: center;
+            font-size: 50px;
+            font-family: Viga;
+            color: white;
+        }
+        #timer{
+            text-align: center;
+            font-size: 45px;
+            font-family: Hack;
+            color: white;
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+        .zerotwo{
+            width: 200px;
+            max-width: 200px;
+        }
+        .darling{
+            text-align: center;
+            font-size: 22px;
+            font-family: Hack;
+            margin-top: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="goodluck">Good Luck</div>
+    <div id="timer">5</div>
+    <script type="text/javascript">
+    var timeleft = 4;
+    var downloadTimer = setInterval(function(){
+        if(timeleft <= 0){
+            clearInterval(downloadTimer);
+            window.location = "?mydarling"
+        }
+        if (timeleft == 2){
+            document.getElementById("timer").innerHTML = "002";
+        }
+        else{
+            document.getElementById("timer").innerHTML = timeleft;
+        }
+        timeleft -= 1;
+    }, 1000);
+    </script>
+    <center><img src="https://s7.gifyu.com/images/ZeroTwoSmiles.gif" class="zerotwo" alt="Zero Two Smiles :)"/></center>
+    <div class="darling">Boku no darling da!</div>
+</body>
+</html>
